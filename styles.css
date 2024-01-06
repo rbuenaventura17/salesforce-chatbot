@@ -4,8 +4,8 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: left;
+    justify-content: left;
     height: 100vh;
     color: #333;
 }
@@ -64,48 +64,29 @@ button:hover {
     border-radius: 8px;
     overflow: hidden;
     display: flex;
-    align-items: center;
-}
-
-.message-container.user-message {
-    justify-content: flex-end;
-}
-
-.message-container.assistant-message {
-    justify-content: flex-start;
-}
-
-.message {
-    padding: 10px;
-    border-radius: 8px;
-    max-width: 70%;
-    word-wrap: break-word;
+    align-items: flex-start;
 }
 
 .user-message .message {
     background-color: #0070e0;
     color: #fff;
-    order: 1;
+    border-radius: 8px;
+    padding: 10px;
+    max-width: 70%;
+    word-wrap: break-word;
 }
 
 .assistant-message .message {
     background-color: #e0f1fb;
     color: #333;
-    order: 2;
+    border-radius: 8px;
+    padding: 10px;
+    max-width: 70%;
+    word-wrap: break-word;
 }
 
 .typing-indicator {
     margin-left: 5px;
     font-size: 0.8em;
     color: #555;
-}
-
-/* New styles for the introduction message */
-#chat-messages .introduction-message {
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    padding: 10px;
 }
