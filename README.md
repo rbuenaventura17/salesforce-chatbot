@@ -29,7 +29,7 @@ To interact with R-Bot, simply open the `index.html` file in your web browser. Y
 
 ## Technologies Used
 
-- OpenAI GPT-3.5 Turbo
+- OpenAI gpt-3.5-turbo-0613
 - HTML, CSS, JavaScript
 
 ## Acknowledgments
