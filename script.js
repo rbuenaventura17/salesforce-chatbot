@@ -68,30 +68,28 @@ async function sendMessage() {
 // Function to send user's message to ChatGPT API and get the response
 async function getChatGPTResponse(userMessage) {
     try {
-        const response = await fetch(endpoint, {
-            method: 'POST',
+        const response = await fetch(endpoint + '?model=gpt-3.5-turbo-0613', {
+            method: 'GET',  // Use 'GET' method
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${apiKey}`,
             },
-            body: JSON.stringify({
-                model: 'gpt-3.5-turbo-0613',
-                messages: [
-                    {
-                        role: 'system',
-                        content: 'User joined the chat.',
-                    },
-                    {
-                        role: 'user',
-                        content: userMessage,
-                    },
-                ],
-            }),
         });
 
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
+
+        const data = await response.json();
+
+        // Extract the assistant's reply from the API response
+        const assistantReply = data.choices[0].message.content;
+        return assistantReply;
+
+    } catch (error) {
+        throw new Error(`Error fetching data: ${error.message}`);
+    }
+}
 
         const data = await response.json();
 
