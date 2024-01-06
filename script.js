@@ -1,10 +1,10 @@
 const chatMessages = document.getElementById('chat-messages');
 const userInput = document.getElementById('user-input');
 
-// Initial greeting
+// Initial introduction message
 chatMessages.innerHTML += `
-    <div class="message-container assistant-message">
-        <div class="message">R-Bot: Welcome! I'm R-Bot, created by Rose Buenaventura to help you better understand Salesforce. Ask me anything related to Salesforce administration.</div>
+    <div class="message-container introduction-message">
+        <div class="message">Welcome! R-Bot, this generative AI-based chatbot, was created by Rose Buenaventura to showcase her skills in adapting AI technology. Built in collaboration with AI, R-Bot can assist you in answering questions related to Salesforce, aiding you in becoming a more proficient Salesforce Administrator.</div>
     </div>
 `;
 
