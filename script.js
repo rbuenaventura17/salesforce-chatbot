@@ -1,14 +1,13 @@
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY; 
+const CHATGPT_API_ENDPOINT = process.env.CHATGPT_API_ENDPOINT; 
+
 const chatMessages = document.getElementById('chat-messages');
 const userInput = document.getElementById('user-input');
-
-// Set your OpenAI API key and ChatGPT API endpoint directly (for demonstration purposes)
-const apiKey = 'OPENAI_API_KEY';
-const endpoint = 'CHATGPT_API_ENDPOINT';
 
 // Initial greeting
 chatMessages.innerHTML += `
     <div class="message-container assistant-message">
-        <div class="message">R-Bot: Welcome! I'm R-Bot, created by Rose Buenaventura to help you better understand Salesforce. Ask me anything related to Salesforce administration.</div>
+        <div class="message">R-Bot: Welcome! I'm R-Bot, a generative AI-based chatbot crafted by Rose Buenaventura to showcase the seamless integration of AI technology. Together, we can explore and enhance your Salesforce expertise. Feel free to ask any Salesforce-related questions, and let's embark on a journey to elevate your skills as a Salesforce Administrator!</div>
     </div>
 `;
 
@@ -68,11 +67,11 @@ async function sendMessage() {
 // Function to send user's message to ChatGPT API and get the response
 async function getChatGPTResponse(userMessage) {
     try {
-        const response = await fetch(endpoint, {
+        const response = await fetch(CHATGPT_API_ENDPOINT, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': `Bearer ${apiKey}`,
+                'Authorization': `Bearer ${OPENAI_API_KEY}`,
             },
             body: JSON.stringify({
                 model: 'gpt-3.5-turbo-0613',
