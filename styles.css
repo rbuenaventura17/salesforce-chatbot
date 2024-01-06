@@ -85,17 +85,27 @@ button:hover {
 .user-message .message {
     background-color: #0070e0;
     color: #fff;
-    order: 1; /* Set the order to 1 for right alignment */
+    order: 1;
 }
 
 .assistant-message .message {
     background-color: #e0f1fb;
     color: #333;
-    order: 2; /* Set the order to 2 for left alignment */
+    order: 2;
 }
 
 .typing-indicator {
     margin-left: 5px;
     font-size: 0.8em;
     color: #555;
+}
+
+/* New styles for the introduction message */
+#chat-messages .introduction-message {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 10px;
 }
