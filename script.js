@@ -8,9 +8,7 @@ const endpoint = 'CHATGPT_API_ENDPOINT';
 // Initial greeting
 chatMessages.innerHTML += `
     <div class="message-container assistant-message">
-        <div class="message">R-Bot: Welcome! I'm R-Bot, a generative AI-based chatbot crafted by Rose Buenaventura to showcase the seamless integration of AI technology. 
-        Together, we can explore and enhance your Salesforce expertise. Feel free to ask any Salesforce-related questions, 
-        and let's embark on a journey to elevate your skills as a Salesforce Administrator!</div>
+        <div class="message">R-Bot: Welcome! I'm R-Bot, a generative AI-based chatbot crafted by Rose Buenaventura to showcase the seamless integration of AI technology. Together, we can explore and enhance your Salesforce expertise. Feel free to ask any Salesforce-related questions, and let's embark on a journey to elevate your skills as a Salesforce Administrator!</div>
     </div>
 `;
 
